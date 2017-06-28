@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+	fetch("http://swapi.co/api/people/1")
+	.then(response => response.json())
+	.then(resp => {
+    console.log(resp)
+	return fetch(resp.homeworld);
+	})
+	.then(r => r.json())
+	.then(data => {
+		console.log(data)
+
+		let homeworld = data.name;
+
+		let residents = data.residents.map(residentUrl => fetch(residentUrl)
+			.then(resp => resp.json())
+			.catch(e => console.error(e))
+			);
+
+		return {planetName: homeworld, residents: Promise.all(residents)};
+	})
+	.then(data => {
+
+		let persons = data.residents
+		.then(resp => {
+			console.log(resp)
+			return resp;
+		})
+		.then(arr => arr.find(person => person.name === "C-3PO"))
+		.then(robot => console.log(robot))
+		// .then(arr => arr
+		// 	.map(person => person.name)
+		// 	.join()
+		// 	)
+		// .then(persons => console.log(data.planetName + ": ", persons));
+		
+	})
+	.catch(error => console.error(error));
+</script>
+
+</body>
+</html>
