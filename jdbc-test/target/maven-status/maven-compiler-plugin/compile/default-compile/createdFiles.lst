@@ -1,0 +1,33 @@
+hiber\User.class
+hiber\App.class
+<<<<<<< HEAD
+hiber\Boat_.class
+hiber\Car_.class
+hiber\PhoneNumber_.class
+hiber\Yacht.class
+hiber\Car.class
+hiber\Post_.class
+hiber\Sex.class
+Main.class
+hiber\Boat.class
+hiber\Employee_.class
+hiber\Department_.class
+=======
+hiber\Yacht.class
+hiber\Car.class
+hiber\Sex.class
+Main.class
+hiber\Boat.class
+>>>>>>> 0285f28a35d73acd24aa24432fae652a6fe507bb
+hiber\HibernateUtil.class
+hiber\Employee.class
+hiber\Color.class
+hiber\Post.class
+<<<<<<< HEAD
+hiber\Yacht_.class
+hiber\Department.class
+hiber\User_.class
+=======
+hiber\Department.class
+>>>>>>> 0285f28a35d73acd24aa24432fae652a6fe507bb
+hiber\PhoneNumber.class

@@ -1,0 +1,17 @@
+protected -1 class User {
+
+final long account;
+String city = "";
+int balance; -1
+static byte []  picture = new int -1 [2048];
+Syring role = "Client"; -1
+
+User(long account)
+	this.account = 100500; -1L
+	this.city = "Dnepr";
+
+}
+
+ String setCity(){
+ this.city = city;
+}
