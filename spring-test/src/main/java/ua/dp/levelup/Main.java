@@ -1,21 +1,11 @@
 package ua.dp.levelup;
 
 import org.hibernate.Hibernate;
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.orm.hibernate5.HibernateTemplate;
-import ua.dp.levelup.core.model.Film;
-import ua.dp.levelup.core.model.MovieSession;
 import ua.dp.levelup.core.model.Order;
 import ua.dp.levelup.core.model.Ticket;
-import ua.dp.levelup.dao.FilmDao;
-import ua.dp.levelup.dao.MovieSessionDao;
 import ua.dp.levelup.dao.OrderDao;
-import ua.dp.levelup.dao.TicketDao;
-import ua.dp.levelup.service.MovieSessionService;
-import ua.dp.levelup.service.UserService;
 
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -25,7 +15,7 @@ public class Main {
 
 
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("application-context.xml");
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("WEB-INF/applicationContext.xml");
 
 //        Message bean1 = (Message)context.getBean("singleton-message");
 //        Message bean2 = (Message)context.getBean("singleton-message");
