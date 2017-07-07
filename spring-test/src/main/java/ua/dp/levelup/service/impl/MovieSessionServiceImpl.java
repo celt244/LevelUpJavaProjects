@@ -6,6 +6,8 @@ import ua.dp.levelup.core.model.MovieSession;
 import ua.dp.levelup.dao.MovieSessionDao;
 import ua.dp.levelup.service.MovieSessionService;
 
+import java.util.List;
+
 /**
  * @author Alexandr Shegeda on 23.06.17.
  */
@@ -29,4 +31,11 @@ public class MovieSessionServiceImpl implements MovieSessionService {
   public MovieSession getMovieSessionById(long sessionId) {
     return movieSessionDao.getMovieSessionById(sessionId);
   }
+
+  @Override
+  public   List<MovieSession> getAllMoviesSessions() {
+    return movieSessionDao.getAllMoviesSessions();
+  }
+
+
 }

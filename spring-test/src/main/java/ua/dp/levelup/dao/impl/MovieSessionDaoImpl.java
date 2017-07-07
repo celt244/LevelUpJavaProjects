@@ -9,6 +9,8 @@ import org.springframework.transaction.annotation.Transactional;
 import ua.dp.levelup.core.model.MovieSession;
 import ua.dp.levelup.dao.MovieSessionDao;
 
+import java.util.List;
+
 /**
  * @author Alexandr Shegeda on 23.06.17.
  */
@@ -30,5 +32,10 @@ public class MovieSessionDaoImpl implements MovieSessionDao {
     @Override
     public MovieSession getMovieSessionById(long sessionId) {
         return template.get(MovieSession.class, sessionId);
+    }
+
+    @Override
+    public List<MovieSession> getAllMoviesSessions() {
+        return template.loadAll(MovieSession.class);
     }
 }
