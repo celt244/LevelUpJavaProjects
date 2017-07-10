@@ -11,7 +11,6 @@
 
   <properties>
     <spring.version>4.3.9.RELEASE</spring.version>
-    <jackson.version>1.9.13</jackson.version>
     <jstl.version>1.2</jstl.version>
   </properties>
 
@@ -32,7 +31,6 @@
           <failOnMissingWebXml>false</failOnMissingWebXml>
         </configuration>
       </plugin>
-
     </plugins>
   </build>
 
@@ -75,31 +73,10 @@
       <version>${spring.version}</version>
     </dependency>
 
-    <!-- Jackson JSON Mapper -->
-    <dependency>
-      <groupId>org.codehaus.jackson</groupId>
-      <artifactId>jackson-mapper-asl</artifactId>
-      <version>${jackson.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>com.fasterxml.jackson.core</groupId>
-      <artifactId>jackson-databind</artifactId>
-      <version>2.5.0</version>
-    </dependency>
-
-    <!-- JSTL -->
-    <dependency>
-      <groupId>javax.servlet</groupId>
-      <artifactId>jstl</artifactId>
-      <version>${jstl.version}</version>
-    </dependency>
-
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>javax.servlet-api</artifactId>
       <version>3.0.1</version>
-      <scope>provided</scope>
     </dependency>
 
     <dependency>
@@ -120,8 +97,11 @@
       <version>5.1.39</version>
     </dependency>
 
-
-
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>jstl</artifactId>
+      <version>${jstl.version}</version>
+    </dependency>
 
   </dependencies>
 

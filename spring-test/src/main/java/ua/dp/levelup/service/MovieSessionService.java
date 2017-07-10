@@ -13,9 +13,5 @@ public interface MovieSessionService {
 
     MovieSession getMovieSessionById(long sessionId);
 
-<<<<<<< HEAD:spring-test/spring-test/src/main/java/ua/dp/levelup/service/MovieSessionService.java
     List<MovieSession> getAllMovieSessions();
-=======
-    List<MovieSession> getAllMoviesSessions();
->>>>>>> 0ef6b5447b4316f035ec60d3095cf87e2e74cd8f:spring-test/src/main/java/ua/dp/levelup/service/MovieSessionService.java
 }

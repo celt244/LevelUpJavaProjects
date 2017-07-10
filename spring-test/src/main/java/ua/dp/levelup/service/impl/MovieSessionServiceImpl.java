@@ -32,15 +32,7 @@ public class MovieSessionServiceImpl implements MovieSessionService {
   }
 
   @Override
-<<<<<<< HEAD:spring-test/spring-test/src/main/java/ua/dp/levelup/service/impl/MovieSessionServiceImpl.java
   public List<MovieSession> getAllMovieSessions() {
     return movieSessionDao.getAllMovieSessions();
   }
-=======
-  public   List<MovieSession> getAllMoviesSessions() {
-    return movieSessionDao.getAllMoviesSessions();
-  }
-
-
->>>>>>> 0ef6b5447b4316f035ec60d3095cf87e2e74cd8f:spring-test/src/main/java/ua/dp/levelup/service/impl/MovieSessionServiceImpl.java
 }

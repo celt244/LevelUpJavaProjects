@@ -17,17 +17,17 @@
 <div>
     movieSessionId|filmId|sessionStartDate|sessionStartTime|hallNumber|standardTicketPrice|comfortTicketPrice
 </div>
-<c:forEach var="session" items="${allMovieSession}">
-        <div>
-            <span>${session.movieSessionId}|</span>
-            <span>${session.filmId}|</span>
-            <span>${session.sessionStartDate}|</span>
-            <span>${session.sessionStartTime}|</span>
-            <span>${session.hallNumber}|</span>
-            <span>${session.standardTicketPrice}|</span>
-            <span>${session.comfortTicketPrice}|</span>
-        </div>
-  </c:forEach>
+<c:forEach var="session" items="${allMovieSessions}">
+    <div>
+        <span>${session.movieSessionId}|</span>
+        <span>${session.filmId}|</span>
+        <span>${session.sessionStartDate}|</span>
+        <span>${session.sessionStartTime}|</span>
+        <span>${session.hallNumber}|</span>
+        <span>${session.standardTicketPrice}|</span>
+        <span>${session.comfortTicketPrice}</span>
+    </div>
+</c:forEach>
 
 </body>
 </html>
