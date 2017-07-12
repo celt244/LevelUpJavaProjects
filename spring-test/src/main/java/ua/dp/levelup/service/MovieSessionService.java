@@ -14,4 +14,6 @@ public interface MovieSessionService {
     MovieSession getMovieSessionById(long sessionId);
 
     List<MovieSession> getAllMovieSessions();
+
+    List<MovieSession> getAllMovieSessionsForToday();
 }

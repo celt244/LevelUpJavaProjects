@@ -2,6 +2,7 @@ package ua.dp.levelup.core.model;
 
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;
 import org.hibernate.annotations.Type;
 
@@ -24,8 +25,12 @@ public class MovieSession {
   private Long movieSessionId;
   private long filmId;
   @Temporal(TemporalType.DATE)
+  @JsonFormat
+          (shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
   private Date sessionStartDate;
   @Temporal(TemporalType.TIME)
+  @JsonFormat
+          (shape = JsonFormat.Shape.STRING, pattern = "hh:mm")
   private Date sessionStartTime;
   private int hallNumber;
   private double standardTicketPrice;

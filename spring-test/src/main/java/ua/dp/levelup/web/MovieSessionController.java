@@ -24,10 +24,12 @@ public class MovieSessionController {
 
     @RequestMapping(value = "/add-session", method = RequestMethod.GET)
     public ModelAndView getAddMovieSessionPage() {
-        return new ModelAndView("add-movie-session");
+        ModelAndView modelAndView = new ModelAndView("add-movie-session");
+        modelAndView.addObject("session", new MovieSession());
+        return modelAndView;
     }
 
-    @RequestMapping(value = "/add-session", method = RequestMethod.POST)
+    /*@RequestMapping(value = "/add-session", method = RequestMethod.POST)
     public String addMovieSession(
             @RequestParam long filmId,
 //            @RequestParam Date sessionStartDate,
@@ -38,6 +40,13 @@ public class MovieSessionController {
             ) {
         movieSessionService.createMovieSession(
                 new MovieSession(filmId, new Date(), new Date(), hallNumber, standardTicketPrice, comfortTicketPrice));
+
+        return "redirect:list";
+    }*/
+
+    @RequestMapping(value = "/add-session", method = RequestMethod.POST, consumes = "application/json")
+    public String addMovieSession(@RequestBody MovieSession session) {
+        movieSessionService.createMovieSession(session);
 
         return "redirect:list";
     }
